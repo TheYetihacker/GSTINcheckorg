@@ -38,14 +38,14 @@ function checkGSTIN() {
     popupMessage.classList.remove('red');
     popupMessage.innerText = "Your GSTIN is being verified by the Authority. Please wait.";
     popup.classList.remove('hidden');
-    loading.classList.remove('hidden');
+    
 
     // After 15 minutes, show the rejection message
     setTimeout(() => {
         popupMessage.classList.remove('blue');
         popupMessage.classList.add('red');
         popupMessage.innerText = "Your provided GSTIN is invalid or rejected. Please try again after some time.";
-        loading.classList.add('hidden'); // Hide loading animation
+  
 
         // After 5 minutes, hide the popup
         setTimeout(() => {
